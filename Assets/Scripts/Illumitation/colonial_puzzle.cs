@@ -16,16 +16,18 @@ public class colonial_puzzle : MonoBehaviour
     public Slider lightsSlider, directionalSlider;
     public Dropdown lightsDrop;
     public bool lightTypeCorrect = false, lightTpyeCorrectAmbiente = true;
-    public int tries = 0;
+    public float tries = 0;
     private float lightsExampleIntensity = 2.4f, ambientExample = 1.2f;
     public GameObject panel;
     public TMP_Text calificacion;
+    public DataManager dataManager;
 
 
     // Start is called before the first frame update
 
     private void Start()
     {
+        tries = dataManager.playerDataSO.tries;
         foreach(GameObject light in GameObject.FindGameObjectsWithTag("Light"))
         {
             lights.Add(light.GetComponent<Light>());
@@ -52,12 +54,13 @@ public class colonial_puzzle : MonoBehaviour
         if (porcentajePrecision > 91 && porcentajePrecisionAmbiente > 91 && lightTypeCorrect && lightTpyeCorrectAmbiente)
         {
             panel.SetActive(true);
-            calificacion.text = "Califiación: " + (10 - (tries / 2)).ToString();
-            Debug.Log("Todo bien");
+            //calificacion.text = "Califiación: " + (10 - (tries / 2)).ToString();
         }
         else
         {
+            dataManager.playerDataSO.tries++;
             tries++;
+            dataManager.SaveData();
         }
 
     }

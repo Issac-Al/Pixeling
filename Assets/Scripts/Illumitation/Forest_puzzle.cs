@@ -21,12 +21,16 @@ public class Forest_puzzle : MonoBehaviour
     public float lightsExampleIntensity = 1.75f, helicompterExample = 2.88f, ambientExample = 0.39f;
     public GameObject panel;
     public TMP_Text calificacion;
+    public DataManager dataManager;
+    public Emailer emailer;
 
 
     // Start is called before the first frame update
 
     private void Start()
     {
+        tries = dataManager.playerDataSO.tries;
+
         foreach (GameObject light in GameObject.FindGameObjectsWithTag("Light"))
         {
             lights.Add(light.GetComponent<Light>());
@@ -65,12 +69,20 @@ public class Forest_puzzle : MonoBehaviour
         if (porcentajePrecision > 91 && porcentajePrecisionHeli > 91 && porcentajePrecisionAmbiente > 91 && lightTypeCorrect && lightTpyeCorrectAmbiente && lightTypeCorrectHelicopter)
         {
             panel.SetActive(true);
-            calificacion.text = "Califiación: " + (10 - (tries / 2)).ToString();
+            float calificacion_num = (10 - (tries / 3));
+            calificacion.text = "Califiación: " + (10 - (tries / 3)).ToString();
             Debug.Log("Todo bien");
+            dataManager.playerDataSO.levelsAccomplished.Add(1);
+            emailer.PlayerProgress("iluminación", dataManager.playerDataSO.name, dataManager.playerDataSO.accountNumber, calificacion_num.ToString());
+            emailer.SendEmail(dataManager.playerDataSO.professorEmail);
+            dataManager.playerDataSO.tries = 0;
+            dataManager.SaveData();
         }
         else
         {
+            dataManager.playerDataSO.tries++;
             tries++;
+            dataManager.SaveData();
         }
 
     }

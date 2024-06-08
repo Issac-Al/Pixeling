@@ -11,7 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     public Transform virtualCamera;
     public Transform followTransform;
-    private float rotationPower = 150f;
+    private float rotationPowerx = 650f;
+    private float rotationPowery = 250f;
     private Vector2 _look;
     //public Transform playerModel;
     private Animator _animator;
@@ -49,12 +50,12 @@ public class PlayerMovement : MonoBehaviour
         #region Follow Transform Rotation
 
         //Rotate the Follow Target transform based on the input
-        followTransform.transform.rotation *= Quaternion.AngleAxis(_look.x * rotationPower, Vector3.up);
+        followTransform.transform.rotation *= Quaternion.AngleAxis(_look.x * rotationPowerx, Vector3.up);
 
         #endregion
 
         #region Vertical Rotation
-        followTransform.transform.rotation *= Quaternion.AngleAxis(_look.y * rotationPower, Vector3.right);
+        followTransform.transform.rotation *= Quaternion.AngleAxis(_look.y * rotationPowery, Vector3.right);
 
         var angles = followTransform.transform.eulerAngles;
         //Debug.Log("angles" + angles);

@@ -14,8 +14,10 @@ using TMPro;
 public class Emailer : MonoBehaviour
 {
     public TMP_InputField recipientEmail;
+    [SerializeField]
     private string mailBody, subject;
     public TMP_InputField username, accountNumber, group;
+    public DataManager dataManager;
     // Start is called before the first frame update
     public void SendEmail()
     {
@@ -43,6 +45,33 @@ public class Emailer : MonoBehaviour
         smtpServer.Send(mail);
     }
 
+    public void SendEmail(string recipientEmail)
+    {
+        MailMessage mail = new MailMessage();
+        SmtpClient smtpServer = new SmtpClient("smtp-mail.outlook.com");
+        //smtpServer.EnableSsl = true;
+        smtpServer.Timeout = 10000;
+        smtpServer.DeliveryMethod = SmtpDeliveryMethod.Network;
+        smtpServer.UseDefaultCredentials = false;
+        smtpServer.Port = 587;
+
+        mail.From = new MailAddress("pixeling_ad@outlook.com");
+        mail.To.Add(new MailAddress(recipientEmail));
+
+        mail.Subject = subject;
+        mail.Body = mailBody;
+
+        smtpServer.Credentials = new System.Net.NetworkCredential("pixeling_ad@outlook.com", "4m4t!st4987") as ICredentialsByHost; smtpServer.EnableSsl = true;
+        ServicePointManager.ServerCertificateValidationCallback = delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
+        {
+            return true;
+        };
+
+        mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
+        smtpServer.Send(mail);
+    }
+
+
     public void SetMailBody(string body)
     {
         mailBody = body;
@@ -52,12 +81,17 @@ public class Emailer : MonoBehaviour
     {
         subject = "Inicio de partida de: " + username.text + " " + accountNumber.text + " del grupo " + group.text;
         mailBody = "Se ha iniciado una nueva partida el: " + System.DateTime.Now.ToString();
+        dataManager.playerDataSO.professorEmail = recipientEmail.text;
+        dataManager.playerDataSO.name = username.text;
+        dataManager.playerDataSO.accountNumber = accountNumber.text;
+        dataManager.playerDataSO.group = group.text;
+        dataManager.SaveData();
     }
 
     public void PlayerProgress(string zone, string name, string accountNumber, string score)
     {
-        subject = "El alumno: " + name + " " + accountNumber + " termino la zona " + zone;
-        mailBody = "Se termino la zona el: " + System.DateTime.Now.ToString() + "\n" + "El jefe fue vencido con un score de: " + score;
+        subject = "El alumno: " + name + " " + accountNumber + " termino el desafío " + zone;
+        mailBody = "Se termino el desafío el: " + System.DateTime.Now.ToString() + "\n" + " con una calificación de: " + score;
     }
 
     public void PrintInputFieldValues()

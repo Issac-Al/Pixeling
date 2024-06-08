@@ -492,12 +492,15 @@ MonoBehaviour:
     scoreData: 
     levelsAccomplished: 
     abilities: 
+    tries: 0
+    score: 0
+    playerPosition: {x: 0, y: 0, z: 0}
     username: 
     accountNumber: 
     professorEmail: 
     group: 
   playerDataSO: {fileID: 11400000, guid: 0e70597dd212cee478b66207361fe8a3, type: 2}
-  fileName: Saved_Game
+  fileName: Saved_Game2
 --- !u!4 &66101131
 Transform:
   m_ObjectHideFlags: 0
@@ -3875,6 +3878,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!1 &854285105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 854285107}
+  - component: {fileID: 854285106}
+  m_Layer: 0
+  m_Name: Emailer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &854285106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854285105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb356f3cd9d6d442b325bea76d8170a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipientEmail: {fileID: 0}
+  username: {fileID: 0}
+  accountNumber: {fileID: 0}
+  group: {fileID: 0}
+--- !u!4 &854285107
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854285105}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.569702, y: -1.7622434, z: 31.68861}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &857913200
 GameObject:
   m_ObjectHideFlags: 0
@@ -8729,6 +8780,8 @@ MonoBehaviour:
   ambientExample: 0.39
   panel: {fileID: 1694548053}
   calificacion: {fileID: 2132950772}
+  dataManager: {fileID: 66101130}
+  emailer: {fileID: 854285106}
 --- !u!4 &2110330790
 Transform:
   m_ObjectHideFlags: 0
@@ -9112,3 +9165,4 @@ SceneRoots:
   - {fileID: 28426317}
   - {fileID: 1035982339}
   - {fileID: 66101131}
+  - {fileID: 854285107}

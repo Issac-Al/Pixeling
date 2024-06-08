@@ -16,6 +16,7 @@ public class DataManager : MonoBehaviour
     private void Start()
     {
         LoadData();
+        Debug.Log(playerDataSO.username);
     }
 
     public void LoadData()
@@ -34,7 +35,7 @@ public class DataManager : MonoBehaviour
             playerDataSO.levelsAccomplished = playerData.levelsAccomplished;
             playerDataSO.professorEmail = playerData.professorEmail;
             playerDataSO.accountNumber = playerData.accountNumber;
-            playerDataSO.name = playerData.username;
+            playerDataSO.username = playerData.username;
             playerDataSO.group = playerData.group;
             playerDataSO.tries = playerData.tries;
             playerDataSO.playerPosition = playerData.playerPosition;
@@ -48,7 +49,7 @@ public class DataManager : MonoBehaviour
             playerDataSO.levelsAccomplished = new List<int>();
             playerDataSO.professorEmail = "";
             playerDataSO.accountNumber = "";
-            playerDataSO.name = "";
+            playerDataSO.username = "";
             playerDataSO.group = "";
             playerDataSO.tries = 0;
             playerDataSO.playerPosition = new Vector3(0, 0, 6.0f);
@@ -63,7 +64,7 @@ public class DataManager : MonoBehaviour
         playerData.levelsAccomplished = playerDataSO.levelsAccomplished;
         playerData.professorEmail = playerDataSO.professorEmail;
         playerData.accountNumber = playerDataSO.accountNumber;
-        playerData.username = playerDataSO.name;
+        playerData.username = playerDataSO.username;
         playerData.group = playerDataSO.group;
         playerData.tries = playerDataSO.tries;
         playerData.playerPosition = playerDataSO.playerPosition;

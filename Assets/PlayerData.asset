@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d047b29848e9904cb4caee81ab126a4, type: 3}
-  m_Name: 
+  m_Name: PlayerData
   m_EditorClassIdentifier: 
   scoreData: 
-  levelsAccomplished: 
+  levelsAccomplished: 01000000
   abilities: 
   tries: 0
   score: 0
-  playerPosition: {x: 0, y: 0, z: 6}
-  username: 
-  accountNumber: 
-  professorEmail: 
-  group: 
+  playerPosition: {x: 1.3373327, y: 0.06500018, z: 7.785446}
+  username: Issac
+  accountNumber: 555
+  professorEmail: issacalexanderguerreroprado@gmail.com
+  group: 2
