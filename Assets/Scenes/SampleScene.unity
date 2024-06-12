@@ -52110,7 +52110,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Robo Friend 1:'
+  m_text: 'Material 1:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -55720,6 +55720,13 @@ MonoBehaviour:
     brillantes y c\xF3mo reflejan la luz."
   - "Cada componente puede tener un color distinto lo cual afectar\xE1 en mayor o
     menor medida el resultado final del material."
+  - "Si el componente difuso es de tonos blancos o negros y el objeto tiene una textura
+    se mostrar\xE1 el color original de la textura haciendose mas claro o m\xE1s
+    oscuro."
+  - "De lo contrario el color de la textura cambiar\xE1 segun el color del componente
+    difuso."
+  - Recuerda que los tonos blancos y oscuros se consiguen teniendo el mismo valor
+    de cada componente RGB.
   - "Si el componente especular es azul y el difuso es rojo observaremos que el objeto
     ser\xE1 rojo pero los reflejos de la luz tendr\xE1n tonalidades azules."
   - "Observa bien este objeto desde varios \xE1ngulos. Como en el ejemplo mencionado
