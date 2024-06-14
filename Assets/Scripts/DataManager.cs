@@ -10,6 +10,8 @@ public class DataManager : MonoBehaviour
     private StreamWriter sw;
     public Data playerDataSO;
     public string fileName;
+    public bool dataExist = false;
+    public bool dataInitialized = false;
 
     // Start is called before the first frame update
 
@@ -40,6 +42,8 @@ public class DataManager : MonoBehaviour
             playerDataSO.tries = playerData.tries;
             playerDataSO.playerPosition = playerData.playerPosition;
             sr.Close();
+            dataExist = true;
+            dataInitialized = true;
             //Debug.Log(level);
         }
         else
@@ -53,6 +57,8 @@ public class DataManager : MonoBehaviour
             playerDataSO.group = "";
             playerDataSO.tries = 0;
             playerDataSO.playerPosition = new Vector3(0, 0, 6.0f);
+            dataExist = false;
+            dataInitialized = true;
             //Debug.Log(playerDataSO.highScore);
         }
     }
