@@ -17,6 +17,7 @@ public class InteractableObject : MonoBehaviour
     public TMP_Text uiText; // Referencia al componente Text en el UI
     public float delay = 0.1f; // Retardo entre cada letra
     public List<string> Text;
+    [SerializeField]
     private int textIndex = 0;
     public int level;
     public bool levelCompleted = false;
@@ -60,10 +61,11 @@ public class InteractableObject : MonoBehaviour
                 panel.SetActive(true);
                 Cursor.visible = true;
                 interacting = true;
+                player.GetComponent<Animator>().SetBool("moving", false);
                 player.GetComponent<PlayerMovement>().enabled = false;
                 text.SetActive(false);
                 StartTypewriterEffect(Text[textIndex]);
-                textIndex++;
+                //textIndex++;
                 Cursor.lockState = CursorLockMode.None;
                 Debug.Log("Hola mundo");
                 if (faceUser)
@@ -116,10 +118,10 @@ public class InteractableObject : MonoBehaviour
     {
         Debug.Log("Text Index inicial" + textIndex);
         Debug.Log("Tamano del texto" + Text.Count);
-        if (textIndex <= Text.Count-1)
+        if (textIndex < Text.Count-1)
         {
-            StartTypewriterEffect(Text[textIndex]);
             textIndex++;
+            StartTypewriterEffect(Text[textIndex]);
             Debug.Log(textIndex);
         }
         else
@@ -131,6 +133,18 @@ public class InteractableObject : MonoBehaviour
             //model.transform.rotation = originalRotation;
             Back();
         }
+    }
+
+    public void PreviewsText()
+    {
+        Debug.Log("textIndex previews text: " + textIndex);
+        if (textIndex > 0)
+        {
+            textIndex--;
+            StartTypewriterEffect(Text[textIndex]);
+            Debug.Log(textIndex);
+        }
+        Debug.Log("textIndex previews text: " + textIndex);
     }
 
     public void Back()

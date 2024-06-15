@@ -932,7 +932,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Robo Friend 1:'
+  m_text: "Material Pl\xE1stico:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -995,7 +995,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -101.04419, w: 0}
+  m_margin: {x: 0, y: 0, z: -164.84998, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3206,7 +3206,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149717794}
-  m_LocalRotation: {x: -0, y: -0.9097078, z: -0, w: 0.4152491}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -9051,7 +9051,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1055, y: -112}
+  m_AnchoredPosition: {x: 1055, y: -140}
   m_SizeDelta: {x: 1494.3, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &353298752
@@ -9529,6 +9529,7 @@ MonoBehaviour:
   - "Para la luz focal se aplican tanto los factores de atenuaci\xF3n por distancia
     como la atenuaci\xF3n angular para modelar la disminuci\xF3n de la intensidad
     con la distancia y el \xE1ngulo del haz."
+  textIndex: 0
   level: 0
   levelCompleted: 0
   dataManager: {fileID: 1865868122}
@@ -9802,7 +9803,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Robo Friend 1:'
+  m_text: 'Material Metal:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10761,8 +10762,9 @@ MonoBehaviour:
   uiText: {fileID: 309242908}
   delay: 0.03
   Text:
-  - "Objeto tipo met\xE1lico: Los metales reflejan una gran cantidad de luz as\xED
-    que tanto el brillo como el componente especular tienen valores elevados."
+  - "Los metales reflejan una gran cantidad de luz as\xED que tanto el brillo como
+    el componente especular tienen valores elevados."
+  textIndex: 0
   level: 0
   levelCompleted: 0
   dataManager: {fileID: 1865868122}
@@ -13842,7 +13844,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 537696697}
-  m_LocalRotation: {x: -0, y: -0.9097078, z: -0, w: 0.4152491}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -14640,7 +14642,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Robo Friend 1:'
+  m_text: 'Material Madera:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14703,7 +14705,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -101.04419, w: 0}
+  m_margin: {x: 0, y: 0, z: -156.92725, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -14956,9 +14958,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1620789681}
+      - m_Target: {fileID: 1663169489}
         m_TargetAssemblyTypeName: InteractableObject, Assembly-CSharp
-        m_MethodName: Start_Puzzle
+        m_MethodName: PreviewsText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15239,9 +15241,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1620789681}
+      - m_Target: {fileID: 1086884723}
         m_TargetAssemblyTypeName: InteractableObject, Assembly-CSharp
-        m_MethodName: Start_Puzzle
+        m_MethodName: PreviewsText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18067,6 +18069,7 @@ MonoBehaviour:
     de cierta forma la luz de un reflector."
   - "Las luces point o puntuales emiten luz en todas las direcciones desde un punt
     \xFAnico como lo har\xEDa un foco en una habitaci\xF3n."
+  textIndex: 0
   level: 0
   levelCompleted: 0
   dataManager: {fileID: 1865868122}
@@ -20602,10 +20605,10 @@ MonoBehaviour:
   uiText: {fileID: 2093708004}
   delay: 0.03
   Text:
-  - "Material tipo pl\xE1stico: El pl\xE1stico tiende a reflejar una cantidad de
-    luz moderada sin llegar a reflejar tanta luz como lo har\xEDa un objeto met\xE1lico
-    as\xED que su componente especular tiende a ser de un valor medio al igual que
-    su brillo."
+  - "El pl\xE1stico tiende a reflejar una cantidad de luz moderada sin llegar a reflejar
+    tanta luz como lo har\xEDa un objeto met\xE1lico as\xED que su componente especular
+    tiende a ser de un valor medio al igual que su brillo."
+  textIndex: 0
   level: 0
   levelCompleted: 0
   dataManager: {fileID: 1865868122}
@@ -20974,7 +20977,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Robo Friend 1:'
+  m_text: 'Material Phong:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -22706,7 +22709,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Robo Friend 1:'
+  m_text: 'Material Lambert:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -22769,7 +22772,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -101.04419, w: 0}
+  m_margin: {x: 0, y: 0, z: -150.80219, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -26475,7 +26478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &963046765
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26539,9 +26542,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1620789681}
+      - m_Target: {fileID: 790078648}
         m_TargetAssemblyTypeName: InteractableObject, Assembly-CSharp
-        m_MethodName: Start_Puzzle
+        m_MethodName: PreviewsText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27006,9 +27009,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1620789681}
+      - m_Target: {fileID: 2126999993}
         m_TargetAssemblyTypeName: InteractableObject, Assembly-CSharp
-        m_MethodName: Start_Puzzle
+        m_MethodName: PreviewsText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -30130,6 +30133,7 @@ MonoBehaviour:
     explicaci\xF3n de c\xF3mo es que se componen para verse as\xED"
   - "\xA1Diviertete analizando los distintos materiales y preparate para el desaf\xEDo
     de esta seccion!"
+  textIndex: 0
   level: 0
   levelCompleted: 0
   dataManager: {fileID: 1865868122}
@@ -31711,9 +31715,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1620789681}
+      - m_Target: {fileID: 2136318290}
         m_TargetAssemblyTypeName: InteractableObject, Assembly-CSharp
-        m_MethodName: Start_Puzzle
+        m_MethodName: PreviewsText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -35282,6 +35286,7 @@ MonoBehaviour:
   Text:
   - 'Objetivo: Modificar los componentes difusos, especulares y el brillo de cada
     objeto para que se vea igual a la referencia.'
+  textIndex: 0
   level: 0
   levelCompleted: 0
   dataManager: {fileID: 1865868122}
@@ -39493,7 +39498,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1476939384
 RectTransform:
   m_ObjectHideFlags: 0
@@ -39557,9 +39562,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1620789681}
+      - m_Target: {fileID: 422287488}
         m_TargetAssemblyTypeName: InteractableObject, Assembly-CSharp
-        m_MethodName: Start_Puzzle
+        m_MethodName: PreviewsText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -40856,8 +40861,9 @@ MonoBehaviour:
   uiText: {fileID: 1776466166}
   delay: 0.03
   Text:
-  - "Material tipo madera: En el mundo real la madera casi no refleja la luz as\xED
-    que su componente especular y su brillo siempre tienden a ser bajos"
+  - "En el mundo real la madera casi no refleja la luz as\xED que su componente especular
+    y su brillo siempre tienden a ser bajos."
+  textIndex: 0
   level: 0
   levelCompleted: 0
   dataManager: {fileID: 1865868122}
@@ -43280,6 +43286,7 @@ MonoBehaviour:
   Text:
   - 'Objetivo:  Ajustar las distintas luces en tipo y en intensidad para que coincidan
     con la muestra proporcioanda.'
+  textIndex: 0
   level: 1
   levelCompleted: 0
   dataManager: {fileID: 1865868122}
@@ -44073,10 +44080,11 @@ MonoBehaviour:
   uiText: {fileID: 1350298424}
   delay: 0.03
   Text:
-  - "Modelo de lambert: Se basa en la suposici\xF3n de que una superficie difusa
-    refleja la luz de manera uniforme en todas las direcciones."
+  - "Se basa en la suposici\xF3n de que una superficie difusa refleja la luz de manera
+    uniforme en todas las direcciones."
   - "Por esta raz\xF3n este modelo no considera componente especular y no tiene brillo,
-    esto nos deja s\xF3lamente con un componente ambiental y un componente difuso"
+    esto nos deja s\xF3lamente con un componente ambiental y un componente difuso."
+  textIndex: 0
   level: 0
   levelCompleted: 0
   dataManager: {fileID: 1865868122}
@@ -48597,7 +48605,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821155130}
-  m_LocalRotation: {x: -0, y: -0.9097078, z: -0, w: 0.4152491}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -49243,6 +49251,8 @@ MonoBehaviour:
     group: 
   playerDataSO: {fileID: 11400000, guid: 0e70597dd212cee478b66207361fe8a3, type: 2}
   fileName: Saved_Game2
+  dataExist: 0
+  dataInitialized: 0
 --- !u!4 &1865868123
 Transform:
   m_ObjectHideFlags: 0
@@ -50229,9 +50239,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1620789681}
+      - m_Target: {fileID: 361939698}
         m_TargetAssemblyTypeName: InteractableObject, Assembly-CSharp
-        m_MethodName: Start_Puzzle
+        m_MethodName: PreviewsText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -52284,7 +52294,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Material 1:'
+  m_text: 'Material Muestra:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -52842,6 +52852,7 @@ MonoBehaviour:
   uiText: {fileID: 0}
   delay: 0.1
   Text: []
+  textIndex: 0
   level: 0
   levelCompleted: 0
   dataManager: {fileID: 1865868122}
@@ -53398,7 +53409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2067956588
 RectTransform:
   m_ObjectHideFlags: 0
@@ -53462,9 +53473,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1620789681}
+      - m_Target: {fileID: 1557510239}
         m_TargetAssemblyTypeName: InteractableObject, Assembly-CSharp
-        m_MethodName: Start_Puzzle
+        m_MethodName: PreviewsText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -53960,9 +53971,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1620789681}
+      - m_Target: {fileID: 681311025}
         m_TargetAssemblyTypeName: InteractableObject, Assembly-CSharp
-        m_MethodName: Start_Puzzle
+        m_MethodName: PreviewsText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -55384,7 +55395,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126708169}
-  m_LocalRotation: {x: -0, y: -0.9097078, z: -0, w: 0.4152491}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -55513,9 +55524,10 @@ MonoBehaviour:
   uiText: {fileID: 1443740329}
   delay: 0.03
   Text:
-  - 'Modelo de Phong: incluye componentes difusos, especulares y ambientales. '
+  - 'Incluye componentes difusos, especulares y ambientales. '
   - "Es una extensi\xF3n del modelo de Lambert con la adici\xF3n de una componente
     especular para simular reflejos brillantes."
+  textIndex: 0
   level: 0
   levelCompleted: 0
   dataManager: {fileID: 1865868122}
@@ -55905,6 +55917,7 @@ MonoBehaviour:
     ser\xE1 rojo pero los reflejos de la luz tendr\xE1n tonalidades azules."
   - "Observa bien este objeto desde varios \xE1ngulos. Como en el ejemplo mencionado
     el cubo es rojo pero la luz reflejada es azul."
+  textIndex: 0
   level: 0
   levelCompleted: 0
   dataManager: {fileID: 1865868122}

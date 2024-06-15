@@ -17,12 +17,14 @@ public class components_puzzle : MonoBehaviour
     public float shininess = 0.5f;
     //public float diffuse_min, diffuse_max, specular_min, specular_max, shiness_min, shiness_max;
     public Slider diffuseSliderR, diffuseSliderG, diffuseSliderB,  specularSliderR, specularSliderG, specularSliderB, shinessSlider;
-    public int tries = 0;
+    public float tries = 0;
     public List<GameObject> examples;
     public List<GameObject> objects;
     public TMP_Text intentos, precision;
     public TMP_Text calificacion;
     public GameObject panel;
+    public DataManager dataManager;
+    public Emailer emailer;
 
     void Start()
     {
@@ -128,6 +130,11 @@ public class components_puzzle : MonoBehaviour
                 calificacion.text = "Calificación: " + score.ToString();
                 panel.SetActive(true);
                 Debug.Log("Nivel superado!!");
+                dataManager.playerDataSO.levelsAccomplished.Add(2);
+                emailer.PlayerProgress("materiales", dataManager.playerDataSO.name, dataManager.playerDataSO.accountNumber, score.ToString());
+                emailer.SendEmail(dataManager.playerDataSO.professorEmail);
+                dataManager.playerDataSO.tries = 0;
+                dataManager.SaveData();
             }
         }
         else
@@ -136,6 +143,13 @@ public class components_puzzle : MonoBehaviour
         }
         intentos.text = tries.ToString();
     }
+
+
+    public void ReturnToMaiNScene()
+    {
+        SceneManager.LoadScene(1);
+    }
+
 
     float CompareColors(Color a, Color b)
     {

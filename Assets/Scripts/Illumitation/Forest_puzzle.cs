@@ -39,7 +39,7 @@ public class Forest_puzzle : MonoBehaviour
 
     public void ReturnToMaiNScene()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void CheckAnswers()

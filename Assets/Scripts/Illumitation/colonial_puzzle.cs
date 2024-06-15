@@ -67,7 +67,7 @@ public class colonial_puzzle : MonoBehaviour
 
     public void ChangeScene()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
 
