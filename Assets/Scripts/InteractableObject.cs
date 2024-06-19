@@ -46,8 +46,8 @@ public class InteractableObject : MonoBehaviour
         foreach (int player_level in dataManager.playerDataSO.levelsAccomplished)
         {
             if (player_level == level)
+                //Debug.Log(player_level);
                 levelCompleted = true;
-            break;
         }
     }
 

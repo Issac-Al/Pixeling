@@ -131,7 +131,7 @@ public class components_puzzle : MonoBehaviour
                 panel.SetActive(true);
                 Debug.Log("Nivel superado!!");
                 dataManager.playerDataSO.levelsAccomplished.Add(2);
-                emailer.PlayerProgress("materiales", dataManager.playerDataSO.name, dataManager.playerDataSO.accountNumber, score.ToString());
+                emailer.PlayerProgress("materiales", dataManager.playerDataSO.username, dataManager.playerDataSO.accountNumber, score.ToString());
                 emailer.SendEmail(dataManager.playerDataSO.professorEmail);
                 dataManager.playerDataSO.tries = 0;
                 dataManager.SaveData();

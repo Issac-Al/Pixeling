@@ -73,7 +73,7 @@ public class Forest_puzzle : MonoBehaviour
             calificacion.text = "Califiación: " + (10 - (tries / 3)).ToString();
             Debug.Log("Todo bien");
             dataManager.playerDataSO.levelsAccomplished.Add(1);
-            emailer.PlayerProgress("iluminación", dataManager.playerDataSO.name, dataManager.playerDataSO.accountNumber, calificacion_num.ToString());
+            emailer.PlayerProgress("iluminación", dataManager.playerDataSO.username, dataManager.playerDataSO.accountNumber, calificacion_num.ToString());
             emailer.SendEmail(dataManager.playerDataSO.professorEmail);
             dataManager.playerDataSO.tries = 0;
             dataManager.SaveData();

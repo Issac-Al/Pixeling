@@ -17,11 +17,14 @@ public class PlayerMovement : MonoBehaviour
     //public Transform playerModel;
     private Animator _animator;
     public DataManager dataManager;
+    [SerializeField]
+    private bool transformLoaded = false;
 
     private float turnSmoothVelocity;
 
     private void Start()
     {
+        Debug.Log(dataManager.playerDataSO.playerPosition);
         transform.position = dataManager.playerDataSO.playerPosition;
         Cursor.lockState = CursorLockMode.Locked;
         _animator = GetComponent<Animator>();
@@ -29,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+  
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
