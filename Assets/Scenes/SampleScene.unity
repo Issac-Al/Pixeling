@@ -9710,14 +9710,14 @@ MonoBehaviour:
   - "\xBFSab\xEDas que cada tipo de iluminaci\xF3n requiere de c\xE1lculos diferentes?"
   - "Los factores para generar una luz son la intensidad, el \xE1ngulo de incidencia
     y la atenuaci\xF3n."
-  - "Para la luz direccional no hay atenuaci\xF3n ya que tiene \"alcance ilimitado\",
-    solo se considera el \xE1ngulo de incidencia y una intensidad inicial. "
+  - "Para la luz direccional no hay atenuaci\xF3n, ya que tiene \"alcance ilimitado\".
+    Solo se consideran el \xE1ngulo de incidencia y una intensidad inicial."
   - "Para la luz puntual se aplican los factores de atenuaci\xF3n para modelar la
-    disminuci\xF3n de la intensidad con la distancia pero no se considera un \xE1ngulo
-    por ser omnidireccional."
+    disminuci\xF3n de la intensidad con la distancia, pero no se considera un \xE1ngulo
+    porque es omnidireccional."
   - "Para la luz focal se aplican tanto los factores de atenuaci\xF3n por distancia
-    como la atenuaci\xF3n angular para modelar la disminuci\xF3n de la intensidad
-    con la distancia y el \xE1ngulo del haz."
+    como la atenuaci\xF3n angular. Esto permite modelar la disminuci\xF3n de la intensidad
+    con la distancia y el \xE1ngulo del haz de luz."
   textIndex: 0
   level: 0
   levelCompleted: 0
@@ -18068,16 +18068,17 @@ MonoBehaviour:
   uiText: {fileID: 2102241480}
   delay: 0.03
   Text:
-  - "\xA1Bienvenido al cuarto de iluminaci\xF3n! Aqu\xED es donde se procesan todos
+  - "\xA1Bienvenido al Cuarto de Iluminaci\xF3n! Aqu\xED es donde procesamos todos
     los elementos que generan alg\xFAn tipo de luz."
-  - Los tipos de luces que existen son de tipo direccional, spot, y point.
-  - "Las direccionales, como dice su nombre,  emiten luz en una direcci\xF3n espec\xEDfica
-    en lugar de dispersarla en todas las direcciones y se utilizan principalmente
+  - Los tipos de luces que existen son de tipo direccional, spot o foco y point o
+    puntual.
+  - "Las luces direccionales, como su nombre indica, emiten luz en una direcci\xF3n
+    espec\xEDfica en lugar de dispersarla en todas direcciones. Se utilizan principalmente
     para iluminar paisajes."
-  - "Las luces spot o de foco concentran la luz en un \xE1rea peque\xF1a imitando
+  - "Las luces spot, o de foco, concentran la luz en un \xE1rea peque\xF1a, imitando
     de cierta forma la luz de un reflector."
-  - "Las luces point o puntuales emiten luz en todas las direcciones desde un punt
-    \xFAnico como lo har\xEDa un foco en una habitaci\xF3n."
+  - "Las luces point, o puntuales, emiten luz en todas las direcciones desde un \xFAnico
+    punto, como lo har\xEDa una bombilla en una habitaci\xF3n."
   textIndex: 0
   level: 0
   levelCompleted: 0
@@ -20708,9 +20709,9 @@ MonoBehaviour:
   uiText: {fileID: 2093708004}
   delay: 0.03
   Text:
-  - "El pl\xE1stico tiende a reflejar una cantidad de luz moderada sin llegar a reflejar
-    tanta luz como lo har\xEDa un objeto met\xE1lico as\xED que su componente especular
-    tiende a ser de un valor medio al igual que su brillo."
+  - "El pl\xE1stico tiende a reflejar una cantidad moderada de luz, pero no tanto
+    como lo har\xEDa un objeto met\xE1lico. Por eso, su componente especular suele
+    ser de un valor medio, al igual que su brillo."
   textIndex: 0
   level: 0
   levelCompleted: 0
@@ -41387,8 +41388,8 @@ MonoBehaviour:
   uiText: {fileID: 1776466166}
   delay: 0.03
   Text:
-  - "En el mundo real la madera casi no refleja la luz as\xED que su componente especular
-    y su brillo siempre tienden a ser bajos."
+  - En el mundo real, la madera casi no refleja la luz, por lo que su componente
+    especular y su brillo siempre tienden a ser bajos.
   textIndex: 0
   level: 0
   levelCompleted: 0
@@ -44420,8 +44421,8 @@ MonoBehaviour:
   Text:
   - "Se basa en la suposici\xF3n de que una superficie difusa refleja la luz de manera
     uniforme en todas las direcciones."
-  - "Por esta raz\xF3n este modelo no considera componente especular y no tiene brillo,
-    esto nos deja s\xF3lamente con un componente ambiental y un componente difuso."
+  - "Por esta raz\xF3n, este modelo no considera componente especular ni tiene brillo.
+    Nos deja solamente con un componente ambiental y un componente difuso."
   textIndex: 0
   level: 0
   levelCompleted: 0
@@ -56360,7 +56361,7 @@ MonoBehaviour:
   delay: 0.03
   Text:
   - 'Incluye componentes difusos, especulares y ambientales. '
-  - "Es una extensi\xF3n del modelo de Lambert con la adici\xF3n de una componente
+  - "Es una extensi\xF3n del modelo de Lambert con la adici\xF3n de un componente
     especular para simular reflejos brillantes."
   textIndex: 0
   level: 0
@@ -56721,17 +56722,17 @@ MonoBehaviour:
   uiText: {fileID: 522494749}
   delay: 0.03
   Text:
-  - "Los materiales tienen un componente ambiental y un componente difuso. Para el
-    modelo de Phong se incluye el componente especular que tambi\xE9n considera los
-    reflejos brillantes."
-  - La componente ambiental representa la luz ambiental que se dispersa por el entorno
+  - "Los materiales tienen un componente ambiental y un componente difuso. En el
+    modelo de Phong se a\xF1ade adem\xE1s el componente especular, que considera
+    los reflejos brillantes."
+  - El componente ambiental representa la luz ambiental que se dispersa por el entorno
     y llega a la superficie desde todas las direcciones.
-  - "La componente difusa describe c\xF3mo una superficie mate (no brillante) refleja
+  - "El componente difusa describe c\xF3mo una superficie mate, no brillante, refleja
     la luz incidente en todas las direcciones de manera uniforme."
   - "Esta reflexi\xF3n depende del \xE1ngulo de incidencia de la luz y la orientaci\xF3n
-    de la superficie. Se puede ver como el color \"base\" del material."
-  - 'La componente especular representa los reflejos brillantes que aparecen en superficies
-    pulidas o brillantes. '
+    de la superficie. Podr\xEDa considerarse como el color \"base\" del material."
+  - La componente especular representa los reflejos brillantes que aparecen en superficies
+    pulidas o brillantes.
   - "Estos reflejos dependen del \xE1ngulo entre el observador y la direcci\xF3n
     del reflejo de la luz."
   - "En el modelo de Phong, la componente especular incluye un par\xE1metro llamado
@@ -56739,18 +56740,18 @@ MonoBehaviour:
     especular en una superficie."
   - "Este par\xE1metro es fundamental para definir el aspecto visual de materiales
     brillantes y c\xF3mo reflejan la luz."
-  - "Cada componente puede tener un color distinto lo cual afectar\xE1 en mayor o
-    menor medida el resultado final del material."
-  - "Si el componente difuso es de tonos blancos o negros y el objeto tiene una textura
-    se mostrar\xE1 el color original de la textura haciendose mas claro o m\xE1s
+  - "Cada componente puede tener un color distinto, lo cual afectar\xE1 en mayor
+    o menor medida el resultado final del material."
+  - "Si el componente difuso tiene tonos blancos o negros y el objeto tiene una textura,
+    mostrar\xE1 el color original de la textura haci\xE9ndose m\xE1s claro o m\xE1s
     oscuro."
-  - "De lo contrario el color de la textura cambiar\xE1 segun el color del componente
+  - "De lo contrario, el color de la textura cambiar\xE1 seg\xFAn el color del componente
     difuso."
   - Recuerda que los tonos blancos y oscuros se consiguen teniendo el mismo valor
-    de cada componente RGB.
-  - "Si el componente especular es azul y el difuso es rojo observaremos que el objeto
-    ser\xE1 rojo pero los reflejos de la luz tendr\xE1n tonalidades azules."
-  - "Observa bien este objeto desde varios \xE1ngulos. Como en el ejemplo mencionado
+    para cada componente RGB.
+  - "Si el componente especular es azul y el difuso es rojo, observaremos que el
+    objeto ser\xE1 rojo pero los reflejos de la luz tendr\xE1n tonalidades azules."
+  - "Observa bien este objeto desde varios \xE1ngulos. Como en el ejemplo mencionado,
     el cubo es rojo pero la luz reflejada es azul."
   textIndex: 0
   level: 0
