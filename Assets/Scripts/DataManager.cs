@@ -9,7 +9,7 @@ public class DataManager : MonoBehaviour
     private StreamReader sr;
     private StreamWriter sw;
     public Data playerDataSO;
-    public string fileName;
+    public string fileName = "Saved_Game10";
     public bool dataExist = false;
     public bool dataInitialized = false;
 
@@ -17,8 +17,9 @@ public class DataManager : MonoBehaviour
 
     private void Start()
     {
+        fileName = "Saved_Game21";
+        Debug.Log(fileName);
         LoadData();
-        Debug.Log(playerDataSO.username);
     }
 
     public void LoadData()

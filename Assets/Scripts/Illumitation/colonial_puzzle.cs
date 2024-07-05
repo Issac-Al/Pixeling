@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -19,7 +18,7 @@ public class colonial_puzzle : MonoBehaviour
     public float tries = 0;
     private float lightsExampleIntensity = 2.4f, ambientExample = 1.2f;
     public GameObject panel;
-    public TMP_Text calificacion;
+    public TMP_Text calificacion, precision, precision_direccional;
     public DataManager dataManager;
 
 
@@ -50,6 +49,9 @@ public class colonial_puzzle : MonoBehaviour
 
         Debug.Log("Porcentaje de precision de Luces: " + porcentajePrecision);
         Debug.Log("Porcentaje de precision de Ambiente: " + porcentajePrecisionAmbiente);
+
+        precision.text = "Precision Lámparas: " + porcentajePrecision.ToString();
+        precision_direccional.text = "Precision Ambiente: " + porcentajePrecisionAmbiente.ToString();
 
         if (porcentajePrecision > 91 && porcentajePrecisionAmbiente > 91 && lightTypeCorrect && lightTpyeCorrectAmbiente)
         {

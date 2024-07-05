@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   scoreData: 
-  levelsAccomplished: 01000000
+  levelsAccomplished: 
   abilities: 
-  tries: 0
+  tries: 3
   score: 0
-  playerPosition: {x: 1.3373327, y: 0.06500018, z: 7.785446}
-  username: Issac
-  accountNumber: 555
-  professorEmail: issacalexanderguerreroprado@gmail.com
-  group: 2
+  playerPosition: {x: -13.307674, y: 0.065000236, z: 33.9208}
+  username: 
+  accountNumber: 
+  professorEmail: 
+  group: 

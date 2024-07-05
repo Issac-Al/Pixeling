@@ -20,7 +20,7 @@ public class Forest_puzzle : MonoBehaviour
     public float tries = 0;
     public float lightsExampleIntensity = 1.75f, helicompterExample = 2.88f, ambientExample = 0.39f;
     public GameObject panel;
-    public TMP_Text calificacion;
+    public TMP_Text calificacion, precisionF, precisionH, precisionA;
     public DataManager dataManager;
     public Emailer emailer;
 
@@ -65,6 +65,10 @@ public class Forest_puzzle : MonoBehaviour
         Debug.Log("Porcentaje de precision de Luces: " + porcentajePrecision);
         Debug.Log("Porcentaje de precision de Helicoptero: " + porcentajePrecisionHeli);
         Debug.Log("Porcentaje de precision de Ambiente: " + porcentajePrecisionAmbiente);
+
+        precisionF.text = "Porcentaje de precision de Luces: " + porcentajePrecision;
+        precisionH.text = "Porcentaje de precision de Helicoptero: " + porcentajePrecisionHeli;
+        precisionA.text = "Porcentaje de precision de Ambiente: " + porcentajePrecisionAmbiente;
 
         if (porcentajePrecision > 91 && porcentajePrecisionHeli > 91 && porcentajePrecisionAmbiente > 91 && lightTypeCorrect && lightTpyeCorrectAmbiente && lightTypeCorrectHelicopter)
         {

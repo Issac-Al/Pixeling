@@ -11,6 +11,7 @@ using UnityEngine.UI;
 using UnityEditor;
 using System;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class Emailer : MonoBehaviour
 {
     public TMP_InputField recipientEmail;
@@ -72,20 +73,18 @@ public class Emailer : MonoBehaviour
     }
 
 
-    public void SetMailBody(string body)
-    {
-        mailBody = body;
-    }
-
     public void MailBodyStartGame()
     {
         subject = "Inicio de partida de: " + username.text + " " + accountNumber.text + " del grupo " + group.text;
         mailBody = "Se ha iniciado una nueva partida el: " + System.DateTime.Now.ToString();
         dataManager.playerDataSO.professorEmail = recipientEmail.text;
-        dataManager.playerDataSO.name = username.text;
+        dataManager.playerDataSO.username = username.text;
         dataManager.playerDataSO.accountNumber = accountNumber.text;
         dataManager.playerDataSO.group = group.text;
+        Debug.Log(dataManager.fileName);
+        Debug.Log(recipientEmail.text);
         dataManager.SaveData();
+        //SceneManager.LoadScene(1);
     }
 
     public void PlayerProgress(string zone, string name, string accountNumber, string score)

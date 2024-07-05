@@ -1,10 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor.Build;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.WSA;
 
 public class CameraMovement : MonoBehaviour
 {
